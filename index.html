@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Encyklopedie - Hlavní stránka</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Hlavní stránka</a>
+        <a href="pages/pojem1.html">Hardware</a>
+        <a href="pages/pojem2.html">Software</a>
+        <a href="pages/pojem3.html">Internet</a>
+        <a href="pages/pojem4.html">Algoritmus</a>
+        <a href="pages/pojem5.html">Databáze</a>
+        <a href="pages/test.html">Test JS</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="search" placeholder="Vyhledat pojem v encyklopedii...">
+        <button type="button">Hledat</button>
+    </div>
+
+    <main class="content">
+        <h1>Vítejte v IT Encyklopedii</h1>
+        <p>Tento web slouží jako jednoduchý, přehledný průvodce základními pojmy ze světa informačních technologií. Je určen pro každého, kdo se chce rychle zorientovat v moderní terminologii.</p>
+        
+        <hr> <h3>Jak s encyklopedií pracovat?</h3>
+        <ul>
+            <li><strong>Procházení kategorií:</strong> V horním navigačním menu klikněte na jakýkoliv pojem, který vás zajímá. Každá stránka obsahuje podrobné vysvětlení a ilustrační obrázek.</li>
+            <li><strong>Vyhledávání:</strong> Pokud hledáte konkrétní termín, můžete využít vyhledávací pole v horní části stránky (funkce vyhledávání je v této verzi simulovaná a nefunguje).</li>
+        </ul>
+
+        <h3>Co všechno se zde dozvíte?</h3>
+        <p>Naše encyklopedie momentálně pokrývá 5 klíčových oblastí IT:</p>
+        <ol>
+            <li><strong>Hardware:</strong> Fyzické součásti počítače.</li>
+            <li><strong>Software:</strong> Programy, aplikace a operační systémy.</li>
+            <li><strong>Internet:</strong> Celosvětová síť a jak funguje propojení počítačů.</li>
+            <li><strong>Algoritmus:</strong> Postupy a návody, podle kterých programy řeší úkoly.</li>
+            <li><strong>Databáze:</strong> Organizovaná úložiště pro efektivní práci s daty.</li>
+        </ol>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 IT Encyklopedie. Všechna práva vyhrazena. Vytvořila: Dominika Macáková +420 123456789</p>
+    </footer>
+
+    <button id="scrollTopBtn" title="Na začátek stránky">↑</button>
+
+    <script>
+        const mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>

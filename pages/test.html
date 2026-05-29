@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testování JavaScriptu - IT Encyklopedie</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html">Hlavní stránka</a>
+        <a href="pojem1.html">Hardware</a>
+        <a href="pojem2.html">Software</a>
+        <a href="pojem3.html">Internet</a>
+        <a href="pojem4.html">Algoritmus</a>
+        <a href="pojem5.html">Databáze</a>
+        <a href="test.html" class="active">Test JS</a> </nav>
+
+    <main class="content content-test">
+        <h1>Testování JavaScriptové funkce</h1>
+        <p><strong>Tato stránka slouží čistě pro testování přiložené JavaScriptové funkce (Scroll to Top).</strong></p>
+        <p>Jelikož ostatní stránky encyklopedie obsahují méně textu a vejdou se na jednu obrazovku, testovací tlačítko by se na nich nemělo projevovat (nemá smysl se vracet nahoru, když už nahoře jste :D).</p>
+        
+        <br><br>
+        <h3>Sjeďte kolečkem myši dolů</h3>
+        <p>Jakmile sjedete o kousek níže, v pravém dolním rohu se objeví kulaté tyrkysové tlačítko se šipkou nahoru, které vás plynulou animací vrátí zpět na začátek stránky.</p>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 IT Encyklopedie. Všechna práva vyhrazená. Vytvořila: Dominika Macáková +420 123456789</p>
+    </footer>
+
+    <button id="scrollTopBtn" title="Na začátek stránky">↑</button>
+
+    <script>
+        const mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>
